@@ -35,4 +35,22 @@ h1 {
   display: block;
   overflow-y: auto;
 }
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: clamp(20px, 3.5vw, 35px);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  h1 {
+    font-size: clamp(20px, 2.5vw, 35px);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  h1 {
+    font-size: clamp(20px, 2vw, 35px);
+  }
+}
 /*# sourceMappingURL=style.css.map */
