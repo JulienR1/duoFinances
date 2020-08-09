@@ -1,0 +1,37 @@
+@import "../variables";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.shadow-bg {
+  box-shadow: $shadow;
+  border-radius: 30px;
+}
+
+h1 {
+  font-size: clamp(20px, 6vw, 35px);
+}
+
+.open-sans {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.scroll {
+  display: block;
+  overflow-y: auto;
+}

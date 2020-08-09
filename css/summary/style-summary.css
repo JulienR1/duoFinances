@@ -1,1 +1,78 @@
-/* No CSS *//*# sourceMappingURL=style-summary.css.map */
+aside {
+  position: relative;
+  display: block;
+  width: 80%;
+  height: 86%;
+  margin: auto;
+  top: 7%;
+}
+
+aside > div {
+  padding: 10%;
+  height: 100%;
+}
+
+aside h1 {
+  text-align: center;
+}
+
+aside #summary {
+  margin: 10% 0;
+  max-height: 70%;
+}
+
+aside table,
+aside tbody {
+  width: 100%;
+}
+
+aside table tr {
+  background: none;
+  padding: 10px;
+  border-spacing: 4px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
+  -webkit-transition: background 0.15s ease;
+  transition: background 0.15s ease;
+}
+
+aside table tr:hover,
+aside table tr:focus {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+aside td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+aside img {
+  display: block;
+  width: 100%;
+  max-width: 60%;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 50%;
+}
+
+aside .amount,
+aside #total {
+  text-align: center;
+  font-size: clamp(17px, 4vw, 25px);
+}
+
+aside .amount[inDepth="0"] {
+  color: #36b623;
+}
+
+aside .amount[inDepth="1"] {
+  color: #d31515;
+}
+/*# sourceMappingURL=style-summary.css.map */
