@@ -5,8 +5,15 @@ aside {
   height: 86%;
   margin: auto;
   top: 7%;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transform: translateX(-130%);
+          transform: translateX(-130%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+aside[visible] {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 aside > div {
@@ -83,6 +90,8 @@ aside .amount[inDepth="1"] {
     width: 40%;
     margin: 0;
     margin-left: 5%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   aside .amount,
   aside #total {

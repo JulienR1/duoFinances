@@ -8,7 +8,12 @@ aside {
   height: 86%;
   margin: auto;
   top: 7%;
-  transition: all $long_transition_time ease;
+  transform: translateX(-130%);
+  transition: all $long_transition_time ease-in-out;
+}
+
+aside[visible] {
+  transform: translateX(0);
 }
 
 aside > div {
@@ -79,6 +84,7 @@ aside .amount[inDepth="1"] {
     width: 40%;
     margin: 0;
     margin-left: 5%;
+    transform: translateX(0);
   }
 
   aside .amount,

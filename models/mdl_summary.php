@@ -30,16 +30,13 @@ class mdl_summary extends DatabaseHandler
         return $usersArray;
     }
 
-    public static function getUserTransactions($month, $year)
-    {
-
-    }
-
     public static function getSummaryTotal($month, $year)
     {
         self::connect();
 
-        $sql = "SELECT ROUND(IFNULL(SUM(amount), 0), 2) AS total FROM transactions WHERE transactions.id NOT IN (SELECT transactionId FROM refunds) AND MONTH(date) = ? AND YEAR(date) = ?";
+        $sql = "SELECT ROUND(IFNULL(SUM(amount), 0), 2) AS total 
+                FROM transactions
+                WHERE transactions.id NOT IN (SELECT transactionId FROM refunds) AND MONTH(date) = ? AND YEAR(date) = ?";
         $sumTable = self::executeSqlStmt($sql, "ss", $month, $year);
         $sumArray = self::getTableAsArray($sumTable);
 

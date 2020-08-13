@@ -19,7 +19,6 @@ if (sizeof($users) > 0) {
 
                     <?php
 foreach ($users as $user) {
-        // TODO: Move in controller
         $initials = strtoupper($user["firstname"][0] . $user["lastname"][0]);
         $paidAmount = number_format($user["moneySpent"] - $total / sizeof($users), 2);
         $inDepth = $paidAmount < 0;
