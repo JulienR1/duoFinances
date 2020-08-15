@@ -1,10 +1,9 @@
 aside {
   width: 80%;
+  left: 10%;
   z-index: 2;
   -webkit-transform: translateX(-130%);
           transform: translateX(-130%);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 aside[visible] {
@@ -83,6 +82,7 @@ aside .amount[inDepth="1"] {
 
 @media screen and (min-width: 600px) {
   aside {
+    left: 0;
     width: 40%;
   }
   aside .amount,

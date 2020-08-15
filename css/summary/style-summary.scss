@@ -3,9 +3,9 @@
 
 aside {
   width: 80%;
+  left: 10%;
   z-index: 2;
   transform: translateX(-130%);
-  transition: all $long_transition_time ease-in-out;
 }
 
 aside[visible] {
@@ -77,6 +77,7 @@ aside .amount[inDepth="1"] {
 
 @media screen and (min-width: 600px) {
   aside {
+    left: 0;
     width: 40%;
   }
 

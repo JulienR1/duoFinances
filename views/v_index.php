@@ -18,7 +18,7 @@
                     </td>
                     <td class="amount open-sans regular">500$</td>
                     <td class="receipt">
-                        <a href="#" target="_blank"><i class="fas fa-download"></i></a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
                     </td>
                 </tr>
                 <tr class="transaction">
@@ -32,7 +32,7 @@
                     </td>
                     <td class="amount open-sans regular">500$</td>
                     <td class="receipt">
-                        <a target="_blank"><i class="fas fa-download"></i></a>
+                        <a target="_blank"><i class="fas fa-external-link-alt"></i></a>
                     </td>
                 </tr>
             </tbody>
