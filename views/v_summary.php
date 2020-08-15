@@ -5,7 +5,7 @@ if (!isset($users)) {
 }
 ?>
 
-<aside>
+<aside class="container">
     <div class="shadow-bg">
         <h1 class="open-sans semibold">Sommaire</h1>
 

@@ -1,10 +1,6 @@
 aside {
-  position: relative;
-  display: block;
   width: 80%;
-  height: 86%;
-  margin: auto;
-  top: 7%;
+  z-index: 2;
   -webkit-transform: translateX(-130%);
           transform: translateX(-130%);
   -webkit-transition: all 0.5s ease-in-out;
@@ -88,10 +84,6 @@ aside .amount[inDepth="1"] {
 @media screen and (min-width: 600px) {
   aside {
     width: 40%;
-    margin: 0;
-    margin-left: 5%;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
   aside .amount,
   aside #total {

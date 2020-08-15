@@ -1,0 +1,119 @@
+main {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 0;
+  max-height: 10%;
+}
+
+header h2 {
+  display: inline-block;
+  max-width: 70%;
+  margin: 0 5%;
+  overflow: hidden;
+}
+
+header button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+header button i {
+  font-size: 5vw;
+}
+
+main #transaction-list {
+  height: 80%;
+  margin: 10% 0;
+}
+
+#transaction-list h3 {
+  text-align: center;
+  padding: 4% 0;
+  max-height: 10%;
+}
+
+#transaction-list table {
+  height: 90%;
+  width: 100%;
+}
+
+#transaction-list tbody {
+  height: 100%;
+}
+
+#transaction-list .transaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #fff;
+  margin: 10px;
+}
+
+#transaction-list .transaction:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+#transaction-list a {
+  text-decoration: none;
+  color: #000;
+}
+
+#transaction-list a:not([href]) i {
+  opacity: 0.2;
+}
+
+#transaction-list .implicated {
+  position: relative;
+  display: block;
+  max-width: 25%;
+  overflow: hidden;
+}
+
+#transaction-list .multiple {
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#transaction-list img {
+  display: block;
+  width: 55%;
+  margin: 0 auto;
+  height: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-radius: 50%;
+}
+
+#transaction-list .multiple img {
+  display: inline-block;
+  width: 35%;
+  margin: 3px;
+}
+/*# sourceMappingURL=style-index.css.map */
