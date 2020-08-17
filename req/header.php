@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="css/base/style.css">
     <link rel="stylesheet" href="css/summary/style-summary.css">
-    <link rel="stylesheet" href="css/index/style-index.css">
+    <link rel="stylesheet" href="css/transactionList/style-transactionList.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/df8eedba6f.js" crossorigin="anonymous"></script>
