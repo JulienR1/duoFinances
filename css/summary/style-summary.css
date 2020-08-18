@@ -89,6 +89,13 @@ aside .amount[inDepth="1"] {
   aside #total {
     font-size: clamp(17px, 2vw, 25px);
   }
+  aside table tr {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+  aside img {
+    max-width: 35%;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -99,6 +106,9 @@ aside .amount[inDepth="1"] {
   aside #total {
     font-size: clamp(17px, 1.4vw, 25px);
   }
+  aside img {
+    max-width: 30%;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -108,6 +118,9 @@ aside .amount[inDepth="1"] {
   aside .amount,
   aside #total {
     font-size: clamp(17px, 1.2vw, 25px);
+  }
+  aside img {
+    max-width: 25%;
   }
 }
 /*# sourceMappingURL=style-summary.css.map */

@@ -67,6 +67,13 @@ main #transaction-list {
   text-align: center;
 }
 
+#transaction-list .transaction .date,
+#transaction-list .transaction .amount {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
 #transaction-list a {
   text-decoration: none;
   color: #000;
@@ -87,14 +94,15 @@ main #transaction-list {
 #transaction-list img {
   display: block;
   position: absolute;
-  top: 0;
-  max-height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 55%;
   border-radius: 50%;
 }
 
 #transaction-list div:not(.multiple) img {
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 
 #transaction-list .multiple img:last-child {
@@ -116,6 +124,10 @@ main #transaction-list {
   header button i {
     font-size: 3vw;
   }
+
+  #transaction-list img {
+    max-height: 45%;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -136,6 +148,10 @@ main #transaction-list {
   #transaction-list .multiple i {
     font-size: 2.3vw;
   }
+
+  #transaction-list img {
+    max-height: 80%;
+  }
 }
 
 @media screen and (min-width: 1100px) {
@@ -150,5 +166,9 @@ main #transaction-list {
 
   main #transaction-list {
     margin: 5% 0;
+  }
+
+  #transaction-list img {
+    max-height: 100%;
   }
 }
