@@ -51,6 +51,10 @@ main #transaction-list {
   max-height: 10%;
 }
 
+#transaction-list h3 a {
+  padding: 0 7px;
+}
+
 #transaction-list table {
   height: 90%;
   width: 100%;

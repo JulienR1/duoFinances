@@ -6,7 +6,10 @@
     </header>
 
     <div id="transaction-list" class="shadow-bg">
-        <h3 class="open-sans semibold">Transactions du mois</h3>
+        <h3 class="open-sans semibold">
+            Transactions du mois
+            <a href=""><i class="fas fa-plus"></i></a>
+        </h3>
         <table>
             <tbody class="scroll">
                 <?php
