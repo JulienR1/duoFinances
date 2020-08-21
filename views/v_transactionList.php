@@ -6,22 +6,22 @@
             <button type="submit"><i class="fas fa-caret-left"></i></button>
         </form>
         <?php
-        $months = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
-        echo '<h2 onclick="openDateSelector(event)" class=" open-sans semibold">'.$months[$month - 1]." ".$year.'</h2>';
-        ?>
+$months = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+echo '<h2 onclick="openDateSelector(event)" class=" open-sans semibold">' . $months[$month - 1] . " " . $year . '</h2>';
+?>
         <form class="offset-form">
             <input name="m" value="<?php echo $month + 1 - ($month == 12 ? 12 : 0); ?>">
             <input name="y" value="<?php echo $year - 2000 + ($month == 12 ? 1 : 0); ?>">
             <button type="submit"><i class="fas fa-caret-right"></i></button>
         </form>
 
-        <?php include "views/v_dateSelector.php"; ?>
+        <?php include "views/v_dateSelector.php";?>
     </header>
 
     <div id="transaction-list" class="shadow-bg">
         <h3 class="open-sans semibold">
             Transactions du mois
-            <a href=""><i class="fas fa-plus"></i></a>
+            <a href="newTransaction.php"><i class="fas fa-plus"></i></a>
         </h3>
         <table>
             <tbody class="scroll">
