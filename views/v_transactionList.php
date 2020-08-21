@@ -1,8 +1,21 @@
 <main class="container">
     <header class="shadow-bg">
-        <button onclick="getPreviousMonth()"><i class="fas fa-caret-left"></i></button>
-        <h2 onclick="openDateSelector()" class=" open-sans semibold">Janvier 1921</h2>
-        <button onclick="getNextMonth()"><i class="fas fa-caret-right"></i></button>
+        <form class="offset-form">
+            <input name="m" value="<?php echo $month - 1 + ($month == 1 ? 12 : 0); ?>">
+            <input name="y" value="<?php echo $year - 2000 - ($month == 1 ? 1 : 0); ?>">
+            <button type="submit"><i class="fas fa-caret-left"></i></button>
+        </form>
+        <?php
+        $months = array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+        echo '<h2 onclick="openDateSelector(event)" class=" open-sans semibold">'.$months[$month - 1]." ".$year.'</h2>';
+        ?>
+        <form class="offset-form">
+            <input name="m" value="<?php echo $month + 1 - ($month == 12 ? 12 : 0); ?>">
+            <input name="y" value="<?php echo $year - 2000 + ($month == 12 ? 1 : 0); ?>">
+            <button type="submit"><i class="fas fa-caret-right"></i></button>
+        </form>
+
+        <?php include "views/v_dateSelector.php"; ?>
     </header>
 
     <div id="transaction-list" class="shadow-bg">

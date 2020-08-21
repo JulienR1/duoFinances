@@ -1,4 +1,12 @@
 <?php
+if(isset($_GET["today"])){
+    header("Location: /");
+    exit();
+}
+
+$month = validateMonth(isset($_GET["m"]) ? $_GET["m"] : null);
+$year = "20".validateYear(isset($_GET["y"]) ? $_GET["y"] : null);
+
 require "req/header.php";
 
 date_default_timezone_set("America/Toronto");
@@ -23,3 +31,23 @@ include "views/v_transactionList.php";
 #endregion
 
 require "req/footer.php";
+
+#region Validations
+function validateYear($yearTest){
+    if(is_numeric($yearTest)){
+        if($yearTest >= 0 && $yearTest < 100){
+            return floor($yearTest);
+        }
+    }
+    return date("y");
+}
+
+function validateMonth($monthTest){
+    if(is_numeric($monthTest)){
+        if($monthTest > 0 && $monthTest <= 12){
+            return ceil($monthTest);
+        }
+    }
+    return date("m");
+}
+#endregion

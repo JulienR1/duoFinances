@@ -1,0 +1,94 @@
+#dateSelector {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+  margin: 15px 0;
+  padding: 20px;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+header:hover #dateSelector,
+#dateSelector:hover,
+#dateSelector[active] {
+  visibility: visible;
+  opacity: 1;
+}
+
+#dateSelector div {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+#dateSelector input {
+  width: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#dateSelector ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+#dateSelector li input {
+  display: none;
+}
+
+#dateSelector li label {
+  display: block;
+  border-radius: 10px;
+  background: #f5f5f5;
+  padding: 5px 10px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+#dateSelector li input:checked + label {
+  background: #e2e2e2;
+}
+
+#dateSelector > button {
+  display: block;
+  margin: 0 auto;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 3px 0;
+}
+
+@media screen and (min-width: 400px) {
+  #dateSelector {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #dateSelector {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #dateSelector {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  #dateSelector {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=style-dateSelector.css.map */

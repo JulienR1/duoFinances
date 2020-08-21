@@ -7,6 +7,7 @@ main {
 header {
   width: 100%;
   display: flex;
+  position: relative;
   justify-content: center;
   padding: 5px 0;
   max-height: 10%;
@@ -18,6 +19,16 @@ header h2 {
   margin: 0 5%;
   overflow: hidden;
   align-self: center;
+  cursor: pointer;
+}
+
+header .offset-form {
+  display: flex;
+  align-self: center;
+}
+
+header .offset-form input {
+  display: none;
 }
 
 header button {
