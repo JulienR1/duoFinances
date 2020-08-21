@@ -1,17 +1,14 @@
 <?php
-if(isset($_GET["today"])){
+if (isset($_GET["today"])) {
     header("Location: /");
     exit();
 }
 
+date_default_timezone_set("America/Toronto");
 $month = validateMonth(isset($_GET["m"]) ? $_GET["m"] : null);
-$year = "20".validateYear(isset($_GET["y"]) ? $_GET["y"] : null);
+$year = "20" . validateYear(isset($_GET["y"]) ? $_GET["y"] : null);
 
 require "req/header.php";
-
-date_default_timezone_set("America/Toronto");
-$month = date("m");
-$year = date("Y");
 
 #region Summary
 require "models/mdl_summary.php";
@@ -33,18 +30,20 @@ include "views/v_transactionList.php";
 require "req/footer.php";
 
 #region Validations
-function validateYear($yearTest){
-    if(is_numeric($yearTest)){
-        if($yearTest >= 0 && $yearTest < 100){
+function validateYear($yearTest)
+{
+    if (is_numeric($yearTest)) {
+        if ($yearTest >= 0 && $yearTest < 100) {
             return floor($yearTest);
         }
     }
     return date("y");
 }
 
-function validateMonth($monthTest){
-    if(is_numeric($monthTest)){
-        if($monthTest > 0 && $monthTest <= 12){
+function validateMonth($monthTest)
+{
+    if (is_numeric($monthTest)) {
+        if ($monthTest > 0 && $monthTest <= 12) {
             return ceil($monthTest);
         }
     }
