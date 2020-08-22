@@ -1,1 +1,296 @@
-/* No CSS *//*# sourceMappingURL=style-newTransaction.css.map */
+form {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  overflow: hidden;
+  max-height: 10%;
+  margin: 0 auto;
+}
+
+header input {
+  display: none;
+}
+
+header label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  cursor: pointer;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  background-color: #ffc2e1;
+}
+
+header input:checked + label {
+  background-color: #d9f3c2;
+}
+
+header label h3 {
+  display: block;
+  padding: 5px;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+
+header input + label #transactionToggle {
+  opacity: 1;
+}
+
+header input:checked + label #transactionToggle {
+  opacity: 0.5;
+}
+
+header input + label #refundToggle {
+  opacity: 0.5;
+}
+
+header input:checked + label #refundToggle {
+  opacity: 1;
+}
+
+header label #toggle {
+  position: absolute;
+  height: calc(100% - 10px);
+  width: 57%;
+  margin: 5px;
+  top: 0;
+  left: calc(43% - 10px);
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header input:checked + label #toggle {
+  left: 0;
+  width: 43%;
+}
+
+header label #toggle i {
+  position: absolute;
+  top: 50%;
+  left: 17px;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+  font-size: 25px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+header input:checked + label #toggle i {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: calc(100% - 27px);
+}
+
+#form-core {
+  height: 80%;
+  margin: 10% 0;
+}
+
+section {
+  width: 100%;
+  height: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section h3 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 10px 0;
+  bottom: 0;
+  background-color: #ffc2e1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+form[isRefund] section ul {
+  background-color: #d9f3c2;
+}
+
+section ul li input {
+  display: none;
+}
+
+section ul li label {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+section ul li img {
+  cursor: pointer;
+  width: 40px;
+  margin: 0 0.75em;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+section ul li input:checked + label img {
+  opacity: 1;
+}
+
+section ul li input:disabled + label img {
+  opacity: 0.1;
+}
+
+#fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: clamp(14px, 3vw, 25px);
+}
+
+#fields div {
+  margin: 4px auto;
+}
+
+#fields input {
+  text-align: center;
+  margin-left: 6px;
+}
+
+#fields label {
+  display: inline-block;
+}
+
+#fields label[for="proof"] {
+  display: block;
+  text-align: center;
+}
+
+#fields #amount {
+  min-height: 20px;
+  width: 120px;
+}
+
+#buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+#buttons a,
+#buttons button {
+  color: #000;
+  padding: 6px 25px;
+  border-radius: 25px;
+  font-size: clamp(14px, 3vw, 25px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#buttons a {
+  text-decoration: none;
+  border: 1px solid #303030;
+}
+
+#buttons button {
+  border: none;
+  outline: none;
+  background: #ffc2e1;
+  cursor: pointer;
+}
+
+form[isRefund] #buttons button {
+  background: #d9f3c2;
+}
+
+#buttons button:hover {
+  background: #ff5eb0;
+}
+
+form[isRefund] #buttons button:hover {
+  background: #92d557;
+}
+
+#buttons a:hover {
+  background: #eaeaea;
+}
+
+@media screen and (min-width: 600px) {
+  #fields label,
+  #buttons button,
+  #buttons a {
+    font-size: clamp(14px, 2vw, 25px);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #fields label[for="proof"] {
+    display: inline-block;
+    text-align: left;
+  }
+  header {
+    width: 75%;
+  }
+  section ul li img {
+    width: 55px;
+  }
+  #fields label,
+  #buttons button,
+  #buttons a {
+    font-size: clamp(14px, 1.3vw, 25px);
+  }
+  #buttons {
+    gap: 25px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  header {
+    width: 50%;
+  }
+  #form-core {
+    margin: 5% 0;
+  }
+  section ul li img {
+    width: 60px;
+  }
+}
+/*# sourceMappingURL=style-newTransaction.css.map */

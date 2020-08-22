@@ -1,4 +1,4 @@
-<main class="container">
+<main class="container main-panel">
     <header class="shadow-bg">
         <form class="offset-form">
             <input name="m" value="<?php echo $month - 1 + ($month == 1 ? 12 : 0); ?>">
