@@ -3,6 +3,14 @@ date_default_timezone_set("America/Toronto");
 $month = date("m");
 $year = date("Y");
 
+$errors = array();
+if (isset($_POST["saveButton"])) {
+    $saveSuccess = saveData();
+    if ($saveSuccess) {
+        header("Location: /");
+    }
+}
+
 require "req/header.php";
 
 #region Summary
@@ -22,3 +30,8 @@ include "views/v_newTransaction.php";
 #endregion
 
 require "req/footer.php";
+
+function saveData()
+{
+
+}

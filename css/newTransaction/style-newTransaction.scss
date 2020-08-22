@@ -99,6 +99,19 @@ section {
   justify-content: space-between;
 }
 
+#refund-only {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: all $long_transition_time ease-in-out;
+}
+
+form[isRefund] #refund-only {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
+}
+
 section h3 {
   text-align: center;
   padding-top: 20px;
@@ -208,7 +221,7 @@ form[isRefund] #buttons button {
 }
 
 #buttons button:hover {
-  background: #ff5eb0;
+  background: #ff3050;
 }
 
 form[isRefund] #buttons button:hover {

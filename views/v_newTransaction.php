@@ -1,5 +1,5 @@
 <main class="container main-panel">
-    <form action="newTransaction.php" method="GET" autocomplete="off">
+    <form action="newTransaction.php" method="POST" autocomplete="off">
         <header class="shadow-bg">
             <input type="checkbox" onclick="switchLayout(event)" name="typeToggle" id="typeToggle">
             <label for="typeToggle">
@@ -22,7 +22,7 @@ foreach ($users as $user) {
                 </ul>
             </section>
 
-            <section class="refund-only">
+            <section id="refund-only">
                 <h3 class="open-sans regular">Receveur</h3>
                 <ul>
                     <?php
@@ -37,7 +37,7 @@ foreach ($users as $user) {
             <section id="fields">
                 <div>
                     <label for="amount" class="open-sans regular">Montant: </label>
-                    <input type="number" class="open-sans regular" name="amount" id="amount" required>
+                    <input type="number" class="open-sans regular" name="amount" id="amount">
                 </div>
                 <div>
                     <label for="proof" class="open-sans regular">Témoin: </label>

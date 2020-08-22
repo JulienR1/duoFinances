@@ -27,7 +27,7 @@ header label {
   cursor: pointer;
   -webkit-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
-  background-color: #ffc2e1;
+  background-color: #ff7d91;
 }
 
 header input:checked + label {
@@ -112,6 +112,20 @@ section {
           justify-content: space-between;
 }
 
+#refund-only {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+form[isRefund] #refund-only {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
+}
+
 section h3 {
   text-align: center;
   padding-top: 20px;
@@ -121,7 +135,7 @@ section ul {
   list-style-type: none;
   padding: 10px 0;
   bottom: 0;
-  background-color: #ffc2e1;
+  background-color: #ff7d91;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,7 +247,7 @@ section ul li input:disabled + label img {
 #buttons button {
   border: none;
   outline: none;
-  background: #ffc2e1;
+  background: #ff7d91;
   cursor: pointer;
 }
 
@@ -242,7 +256,7 @@ form[isRefund] #buttons button {
 }
 
 #buttons button:hover {
-  background: #ff5eb0;
+  background: #ff3050;
 }
 
 form[isRefund] #buttons button:hover {
