@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET["today"])) {
-    header("Location: /");
+    header("Location: /multifinances/");
     exit();
 }
 

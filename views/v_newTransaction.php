@@ -56,7 +56,7 @@ foreach ($users as $user) {
             </section>
 
             <section id="buttons">
-                <a href="/" class="open-sans regular">Annuler</a>
+                <a href="/multifinances/" class="open-sans regular">Annuler</a>
                 <button type="submit" name="saveButton" class="open-sans regular shadow-bg">Enregistrer</button>
             </section>
         </div>

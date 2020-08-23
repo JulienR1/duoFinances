@@ -11,7 +11,7 @@ if (isset($_POST["saveButton"])) {
     if ($data["valid"] === true) {
         $saveSuccess = $newTransactionModel->save($data);
         if ($saveSuccess) {
-            header("Location: /");
+            header("Location: /multifinances/");
         } else {
             echo "Une erreur SQl est survenue.";
             exit();
