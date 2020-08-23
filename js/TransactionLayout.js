@@ -8,3 +8,14 @@ function switchLayout(event) {
     form.removeAttribute("isRefund");
   }
 }
+
+function disableReceiver(event) {
+  const id = event.srcElement.value;
+  const receivers = document.querySelectorAll("#refund-only input");
+  receivers.forEach((receiver) => {
+    receiver.disabled = false;
+    if (receiver.value == id) {
+      receiver.disabled = true;
+    }
+  });
+}

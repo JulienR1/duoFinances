@@ -39,7 +39,7 @@ foreach ($transactions as $transaction) {
 function formatTransaction($transaction, $month, $year)
 {
     $initials = strtoupper($transaction["firstname"][0] . $transaction["lastname"][0]);
-    $proofSrc = isset($transaction["proofSrc"]) ? 'href="receipts/' . $year . '-' . $month . '/' . $transaction["proofSrc"] . '"' : "";
+    $proofSrc = (isset($transaction["proofSrc"]) && !empty($transaction["proofSrc"])) ? 'href="receipts/' . $year . '-' . $month . '/' . $transaction["proofSrc"] . '"' : "";
 
     $output = "";
     $output .= '<tr class="transaction">';

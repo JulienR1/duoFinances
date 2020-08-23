@@ -86,6 +86,12 @@ header input:checked + label #toggle i {
   left: calc(100% - 27px);
 }
 
+p {
+  color: $red;
+  text-align: center;
+  padding-top: 20px;
+}
+
 #form-core {
   height: 80%;
   margin: 10% 0;
@@ -97,6 +103,10 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.error section {
+  height: 22%;
 }
 
 #refund-only {
@@ -252,6 +262,10 @@ form[isRefund] #buttons button:hover {
 
   section ul li img {
     width: 55px;
+  }
+
+  #fields #amount {
+    height: 30px;
   }
 
   #fields label,
