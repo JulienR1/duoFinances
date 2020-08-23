@@ -9,14 +9,39 @@ body {
   height: 100%;
 }
 
+body {
+  background-color: #f5f5f5;
+}
+
+.container {
+  position: absolute;
+  display: block;
+  height: 86%;
+  margin: auto;
+  top: 7%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.main-panel {
+  width: 80%;
+  left: 10%;
+}
+
 .shadow-bg {
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
+  background: #fff;
 }
 
-h1 {
+h1,
+h2 {
   font-size: clamp(20px, 6vw, 35px);
+}
+
+h3 {
+  font-size: clamp(14px, 3vw, 27px);
 }
 
 .open-sans {
@@ -34,5 +59,46 @@ h1 {
 .scroll {
   display: block;
   overflow-y: auto;
+}
+
+@media screen and (min-width: 600px) {
+  .main-panel {
+    width: 45%;
+    left: 45%;
+  }
+  h1,
+  h2 {
+    font-size: clamp(20px, 3.5vw, 35px);
+  }
+  h3 {
+    font-size: clamp(18px, 2vw, 25px);
+  }
+  .container {
+    margin: 0;
+    margin-left: 5%;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .main-panel {
+    width: 55%;
+    left: 35%;
+  }
+  h1,
+  h2 {
+    font-size: clamp(20px, 2.5vw, 35px);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .main-panel {
+    width: 65%;
+    left: 25%;
+  }
+  h1 {
+    font-size: clamp(20px, 2vw, 35px);
+  }
 }
 /*# sourceMappingURL=style.css.map */

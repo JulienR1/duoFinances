@@ -1,0 +1,172 @@
+main {
+  display: flex;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 5px 0;
+  max-height: 10%;
+}
+
+header h2 {
+  display: inline-flex;
+  max-width: 70%;
+  margin: 0 5%;
+  overflow: hidden;
+  align-self: center;
+  cursor: pointer;
+}
+
+header .offset-form {
+  display: flex;
+  align-self: center;
+}
+
+header .offset-form input {
+  display: none;
+}
+
+header button {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+header button i {
+  font-size: 5vw;
+}
+
+main #transaction-list {
+  height: 80%;
+  margin: 10% 0;
+}
+
+#transaction-list h3 {
+  text-align: center;
+  padding: 4% 0;
+  max-height: 10%;
+}
+
+#transaction-list h3 a {
+  padding: 0 7px;
+}
+
+#transaction-list table {
+  height: 90%;
+  width: 100%;
+}
+
+#transaction-list tbody {
+  height: 100%;
+}
+
+#transaction-list .transaction {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 10%;
+  background-color: #fff;
+  margin: 10px;
+}
+
+#transaction-list .transaction:hover {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+#transaction-list .transaction td {
+  text-align: center;
+}
+
+#transaction-list .transaction .date,
+#transaction-list .transaction .amount {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+#transaction-list a {
+  text-decoration: none;
+  color: #000;
+}
+
+#transaction-list a:not([href]) i {
+  opacity: 0.2;
+}
+
+#transaction-list .implicated,
+#transaction-list .implicated > div {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 100%;
+}
+
+#transaction-list img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-height: 55%;
+  border-radius: 50%;
+}
+
+#transaction-list div:not(.multiple) img {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#transaction-list .multiple img:last-child {
+  right: 0;
+}
+
+#transaction-list i {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  header button i {
+    font-size: 3vw;
+  }
+
+  #transaction-list img {
+    max-height: 45%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #transaction-list h3 {
+    padding: 4% 0;
+    max-height: 15%;
+  }
+
+  #transaction-list table {
+    height: 85%;
+  }
+
+  #transaction-list .multiple i {
+    font-size: 2.3vw;
+  }
+
+  #transaction-list img {
+    max-height: 80%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  header button i {
+    font-size: 2.5vw;
+  }
+
+  main #transaction-list {
+    margin: 5% 0;
+  }
+
+  #transaction-list img {
+    max-height: 100%;
+  }
+}

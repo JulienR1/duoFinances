@@ -1,10 +1,14 @@
 aside {
-  position: relative;
-  display: block;
   width: 80%;
-  height: 86%;
-  margin: auto;
-  top: 7%;
+  left: 10%;
+  z-index: 2;
+  -webkit-transform: translateX(-130%);
+          transform: translateX(-130%);
+}
+
+aside[visible] {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 aside > div {
@@ -74,5 +78,49 @@ aside .amount[inDepth="0"] {
 
 aside .amount[inDepth="1"] {
   color: #d31515;
+}
+
+@media screen and (min-width: 600px) {
+  aside {
+    left: 0;
+    width: 40%;
+  }
+  aside .amount,
+  aside #total {
+    font-size: clamp(17px, 2vw, 25px);
+  }
+  aside table tr {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+  aside img {
+    max-width: 35%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  aside {
+    width: 30%;
+  }
+  aside .amount,
+  aside #total {
+    font-size: clamp(17px, 1.4vw, 25px);
+  }
+  aside img {
+    max-width: 30%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  aside {
+    width: 20%;
+  }
+  aside .amount,
+  aside #total {
+    font-size: clamp(17px, 1.2vw, 25px);
+  }
+  aside img {
+    max-width: 25%;
+  }
 }
 /*# sourceMappingURL=style-summary.css.map */
