@@ -51,7 +51,7 @@ foreach ($users as $user) {
                 </div>
                 <div>
                     <label for="proof" class="open-sans regular">Témoin: </label>
-                    <input type="file" class="open-sans regular" name="proof" id="proof">
+                    <input type="file" class="open-sans regular" name="proof" id="proof" accept="image/*">
                 </div>
             </section>
 
