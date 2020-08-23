@@ -35,7 +35,12 @@ class mdl_newTransaction extends DatabaseHandler
             $ext = $info["extension"];
             $newName = $senderId . "_" . date("Ymd_His") . "." . $ext;
 
-            $target = "receipts/" . date("Y-m") . "/" . $newName;
+            $dir = "receipts/" . date("Y-m") . "/";
+            if (!is_dir($dir)) {
+                mkdir($dir);
+            }
+
+            $target = $dir . $newName;
             move_uploaded_file($_FILES["proof"]["tmp_name"], $target);
         } catch (Exception $e) {
             return null;

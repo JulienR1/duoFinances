@@ -92,7 +92,7 @@ header input:checked + label #toggle i {
   left: calc(100% - 27px);
 }
 
-p {
+.error-msg {
   color: #d31515;
   text-align: center;
   padding-top: 20px;
