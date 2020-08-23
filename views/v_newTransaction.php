@@ -14,7 +14,7 @@
         <div class="shadow-bg <?php echo (isset($data) && $data["valid"] === false) ? "error" : ""; ?>" id="form-core">
             <?php
 if (isset($data) && $data["valid"] === false) {
-    echo '<p class="open-sans semibold">
+    echo '<p class="open-sans semibold error-msg">
                 La saisie est invalide.<br>Données non-sauvegardées.
             </p>';
 }
