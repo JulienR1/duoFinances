@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/base/style.css">
     <link rel="stylesheet" href="css/summary/style-summary.css">
     <?php
-if ($_SERVER["SCRIPT_NAME"] == "/index.php") {
+if (strpos($_SERVER["SCRIPT_NAME"], "/index.php")) {
     echo '<link rel="stylesheet" href="css/transactionList/style-transactionList.css">';
     echo '<link rel="stylesheet" href="css/dateSelector/style-dateSelector.css">';
 }
-if ($_SERVER["SCRIPT_NAME"] == "/newTransaction.php") {
+if (strpos($_SERVER["SCRIPT_NAME"], "/newTransaction.php")) {
     echo '<link rel="stylesheet" href="css/newTransaction/style-newTransaction.css">';
 }
 ?>
