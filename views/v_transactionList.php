@@ -53,7 +53,11 @@ function formatTransaction($transaction, $month, $year)
         $output .= '<img src="assets/img/' . $transaction["receivingImgSrc"] . '" alt="' . $receivingInitials . '">';
     }
     $output .= '</div></td>';
-    $output .= '<td class="amount open-sans regular">' . $transaction["amount"] . '$</td>';
+    if (isset($transaction["shortDesc"])) {
+        $output .= '<td class="amount open-sans regular"><div><p>' . $transaction["amount"] . '$</p><p>' . $transaction["shortDesc"] . '</p></div></td>';
+    } else {
+        $output .= '<td class="amount open-sans regular">' . $transaction["amount"] . '$</td>';
+    }
     $output .= '<td class="receipt">';
     $output .= '<a ' . $proofSrc . ' target="_blank"><i class="fas fa-external-link-alt"></i></a>';
     $output .= '</td></tr>';

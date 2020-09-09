@@ -172,6 +172,7 @@ section ul li input:disabled + label img {
   display: flex;
   justify-content: center;
   font-size: clamp(14px, 3vw, 25px);
+  height: 30%;
 }
 
 #fields div {
@@ -192,9 +193,14 @@ section ul li input:disabled + label img {
   text-align: center;
 }
 
-#fields #amount {
+#fields #amount,
+#fields #desc {
   min-height: 20px;
   width: 120px;
+}
+
+#fields #desc {
+  width: 170px;
 }
 
 #buttons {
@@ -264,7 +270,8 @@ form[isRefund] #buttons button:hover {
     width: 55px;
   }
 
-  #fields #amount {
+  #fields #amount,
+  #fields #desc {
     height: 30px;
   }
 

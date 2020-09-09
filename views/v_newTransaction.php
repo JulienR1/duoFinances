@@ -1,5 +1,6 @@
 <main class="container main-panel">
-    <form action="newTransaction.php" method="POST" enctype="multipart/form-data" autocomplete="off"
+    <form action="newTransaction.php" method="POST" onkeydown="return event.key != 'Enter';"
+        enctype="multipart/form-data" autocomplete="off"
         <?php echo (isset($data["isRefund"]) && $data["isRefund"]) ? "isRefund" : ""; ?>>
         <header class="shadow-bg">
             <input type="checkbox" onclick="switchLayout(event)" name="typeToggle" id="typeToggle"
@@ -44,6 +45,11 @@ foreach ($users as $user) {
             </section>
 
             <section id="fields">
+                <div>
+                    <label for="desc" class="open-sans regular">Description: </label>
+                    <input type="text" class="open-sans regular" name="desc" id="desc"
+                        <?php echo 'value="' . (isset($data["desc"]) ? $data["desc"] : "") . '"'; ?>>
+                </div>
                 <div>
                     <label for="amount" class="open-sans regular">Montant: </label>
                     <input type="number" class="open-sans regular" name="amount" id="amount"
