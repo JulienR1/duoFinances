@@ -1,5 +1,6 @@
 <main class="container main-panel">
-    <form action="newTransaction.php" method="POST" enctype="multipart/form-data" autocomplete="off"
+    <form action="newTransaction.php" method="POST" onkeydown="return event.key != 'Enter';"
+        enctype="multipart/form-data" autocomplete="off"
         <?php echo (isset($data["isRefund"]) && $data["isRefund"]) ? "isRefund" : ""; ?>>
         <header class="shadow-bg">
             <input type="checkbox" onclick="switchLayout(event)" name="typeToggle" id="typeToggle"

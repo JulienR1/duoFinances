@@ -8,6 +8,7 @@ class mdl_newTransaction extends DatabaseHandler
     {
         $fileName = self::copyFile($data["proof"], $data["sender"]);
 
+        $success = true;
         self::connect();
 
         try {
@@ -21,17 +22,23 @@ class mdl_newTransaction extends DatabaseHandler
             }
         } catch (Exception $e) {
             echo $e;
+            $success = false;
+        } finally {
+            self::close();
         }
 
-        self::close();
-
-        return $fileName != null;
+        return $success;
     }
 
     private static function copyFile($proofSrc, $senderId)
     {
         try {
+            if (empty($_FILES["proof"]["name"])) {
+                return null;
+            }
+
             $info = pathinfo($_FILES["proof"]["name"]);
+
             $ext = $info["extension"];
             $newName = $senderId . "_" . date("Ymd_His") . "." . $ext;
 

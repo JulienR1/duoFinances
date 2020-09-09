@@ -13,7 +13,7 @@ if (isset($_POST["saveButton"])) {
         if ($saveSuccess) {
             header("Location: /");
         } else {
-            echo "Une erreur SQl est survenue.";
+            echo "Une erreur SQL est survenue.";
             exit();
         }
     }
