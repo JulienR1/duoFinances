@@ -6,7 +6,7 @@ class mdl_newTransaction extends DatabaseHandler
 {
     public static function save($data)
     {
-        $fileName = self::copyFile($data["proof"], $data["sender"]);
+        $fileName = self::copyFile($data["sender"]);
 
         $success = true;
         self::connect();
@@ -14,11 +14,11 @@ class mdl_newTransaction extends DatabaseHandler
         try {
             $sql = "";
             if ($data["isRefund"]) {
-                $sql = "CALL CreateRefund(?, ?, ?, ?)";
-                self::executeSqlStmt($sql, "iids", $data["sender"], $data["receiver"], $data["amount"], $fileName);
+                $sql = "CALL CreateRefund(?, ?, ?, ?, ?)";
+                self::executeSqlStmt($sql, "iidss", $data["sender"], $data["receiver"], $data["amount"], $fileName, $data["desc"]);
             } else {
-                $sql = "CALL CreateTransaction(?, ?, ?)";
-                self::executeSqlStmt($sql, "ids", $data["sender"], $data["amount"], $fileName);
+                $sql = "CALL CreateTransaction(?, ?, ?, ?)";
+                self::executeSqlStmt($sql, "idss", $data["sender"], $data["amount"], $fileName, $data["desc"]);
             }
         } catch (Exception $e) {
             echo $e;
@@ -30,7 +30,7 @@ class mdl_newTransaction extends DatabaseHandler
         return $success;
     }
 
-    private static function copyFile($proofSrc, $senderId)
+    private static function copyFile($senderId)
     {
         try {
             if (empty($_FILES["proof"]["name"])) {

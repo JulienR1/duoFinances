@@ -10,10 +10,10 @@ class mdl_transactionList extends DatabaseHandler
 
         $query = "SELECT *
                 FROM
-                (SELECT date, firstname, lastname, imgSrc, receivingFirstname, receivingLastname, receivingImgSrc, amount, proofSrc
-                FROM (SELECT A.id, date, firstname, lastname, imgSrc, amount, proofSrc
+                (SELECT date, firstname, lastname, imgSrc, receivingFirstname, receivingLastname, receivingImgSrc, amount, proofSrc, shortDesc
+                FROM (SELECT A.id, date, firstname, lastname, imgSrc, amount, proofSrc, shortDesc
                     FROM users
-                    JOIN (SELECT transactions.id, date, userId, amount, proofSrc
+                    JOIN (SELECT transactions.id, date, userId, amount, proofSrc, shortDesc
                         FROM transactions
                         LEFT JOIN refunds ON refunds.transactionId = transactions.id) AS A
                     ON users.id = userId) AS X

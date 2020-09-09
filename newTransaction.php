@@ -81,8 +81,8 @@ function validateData()
         $data["valid"] = false;
     }
 
-    if (isset($_POST["proof"])) {
-        $data["proof"] = $_POST["proof"];
+    if (isset($_POST["desc"])) {
+        $data["desc"] = $_POST["desc"];
     }
 
     if (isset($data["sender"]) && isset($data["receiver"]) && $data["sender"] == $data["receiver"]) {

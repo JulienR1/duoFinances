@@ -104,6 +104,22 @@ main #transaction-list {
       align-self: center;
 }
 
+#transaction-list .transaction .amount div p:first-child {
+  display: none;
+}
+
+#transaction-list .transaction .amount div p:last-child {
+  display: block;
+}
+
+#transaction-list .transaction .amount:hover div p:first-child {
+  display: block;
+}
+
+#transaction-list .transaction .amount:hover div p:last-child {
+  display: none;
+}
+
 #transaction-list a {
   text-decoration: none;
   color: #000;

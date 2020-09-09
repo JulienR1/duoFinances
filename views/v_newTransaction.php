@@ -46,6 +46,11 @@ foreach ($users as $user) {
 
             <section id="fields">
                 <div>
+                    <label for="desc" class="open-sans regular">Description: </label>
+                    <input type="text" class="open-sans regular" name="desc" id="desc"
+                        <?php echo 'value="' . (isset($data["desc"]) ? $data["desc"] : "") . '"'; ?>>
+                </div>
+                <div>
                     <label for="amount" class="open-sans regular">Montant: </label>
                     <input type="number" class="open-sans regular" name="amount" id="amount"
                         <?php echo 'value="' . ((isset($data["amount"]) && $data["amount"] > 0) ? $data["amount"] : "") . '"'; ?>>
